@@ -594,9 +594,15 @@ footer{
     .project-box{
         width: 80%;
     }
+    .scroll-icon-box{
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 540px){
+    .wrapper{
+        align-items: center;
+    }
     .featured-name{
         font-size: 32px;
     }
