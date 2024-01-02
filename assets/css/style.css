@@ -304,6 +304,7 @@ h3{
     text-align: justify;
     font-size: 15px;
     color: #777;
+    padding-bottom: 10px;
 }
 .about-btn button{
     position: absolute;
