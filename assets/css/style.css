@@ -1,31 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit&family=Poppins:wght@400;500;600;700&family=Quantico&display=swap');
 
-:root {
+:root{
     --body-color: rgb(250, 250, 250);
     --color-white: rgb(255, 255, 255);
-
     --text-color-second: rgb(68, 68, 68);
     --text-color-third: rgb(30, 159, 171);
-
     --first-color: rgb(110, 87, 224);
     --first-color-hover: rgb(40, 91, 212);
-
     --second-color: rgb(0, 201, 255);
     --third-color: rgb(192, 166, 49);
     --first-shadow-color: rgba(0, 0, 0, 0.1);
 }
-
+/* ----- BASE ----- */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
+/* ----- SMOOTH SCROLL ----- */
 html{
     scroll-behavior: smooth;
 }
-
+/* ----- CHANGE THE SCROLL BAR DESIGN ----- */
 ::-webkit-scrollbar{
     width: 12px;
     border-radius: 25px;
@@ -40,7 +37,8 @@ html{
 ::-webkit-scrollbar-thumb:hover{
     background: #bbb;
 }
-
+/* ---##-- REUSABLE CSS --##--- */
+/* ----- GLOBAL BUTTON DESIGN ----- */
 .btn{
     font-weight: 500;
     padding: 12px 20px;
@@ -57,11 +55,11 @@ html{
     background: var(--second-color);
     color: var(--color-white);
 }
-
+/* ----- GLOBAL ICONS DESIGN ----- */
 i{
     font-size: 16px;
 }
-
+/* ------- BASE -------- */
 body{
     background: var(--body-color);
 }
@@ -69,7 +67,7 @@ body{
     width: 100%;
     position: relative;
 }
-
+/* ----- NAVIGATION BAR ----- */
 nav{
     position: fixed;
     display: flex;
@@ -83,7 +81,7 @@ nav{
     z-index: 100;
 }
 .nav-logo{
-    position: relative;
+   position: relative;
 }
 .nav-name{
     font-size: 30px;
@@ -134,17 +132,18 @@ nav{
     background: var(--first-color);
     border-radius: 50%;
 }
-
+/* ----- WRAPPER DESIGN ----- */
 .wrapper{
     padding-inline: 10vw;
 }
-
+/* ----- FEATURED BOX ----- */
 .featured-box{
     position: relative;
     display: flex;
     height: 100vh;
     min-height: 700px;
 }
+/* ----- FEATURED TEXT BOX ----- */
 .featured-text{
     position: relative;
     display: flex;
@@ -182,7 +181,7 @@ nav{
     gap: 20px;
 }
 .featured-text-btn>.blue-btn{
-    background-color: var(--first-color);
+    background: var(--first-color);
     color: var(--color-white);
 }
 .featured-text-btn>.blue-btn:hover{
@@ -208,9 +207,9 @@ nav{
     color: var(--first-color);
     transition: .3s;
 }
-
+/* ----- FEATURED IMAGE BOX ----- */
 .featured-image{
-    display: flex;    
+    display: flex;
     justify-content: right;
     align-content: center;
     min-height: 80vh;
@@ -222,42 +221,40 @@ nav{
     height: 380px;
     border-radius: 55% 45% 55% 45%;
     overflow: hidden;
-    animation: imgFLoat 7s ease-in-out infinite;
+    animation: imgFloat 7s ease-in-out infinite;
 }
 .image img{
     width: 380px;
     height: 380px;
     object-fit: cover;
 }
-
-@keyframes imgFLoat {
+@keyframes imgFloat {
     50%{
         transform: translateY(10px);
         border-radius: 45% 55% 45% 55%;
     }
 }
-
 .scroll-btn{
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    translate: -50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 150px;
-    height: 50px;
-    gap: 5px;
-    text-decoration: none;
-    color: var(--text-color-second);
-    background: var(--color-white);
-    border-radius: 30px;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+   position: absolute;
+   bottom: 0;
+   left: 50%;
+   translate: -50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 150px;
+   height: 50px;
+   gap: 5px;
+   text-decoration: none;
+   color: var(--text-color-second);
+   background: var(--color-white);
+   border-radius: 30px;
+   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
 }
 .scroll-btn i{
     font-size: 20px;
 }
-
+/* ----- MAIN BOX ----- */
 .section{
     padding-block: 5em;
 }
@@ -271,7 +268,7 @@ nav{
     display: flex;
     width: 50%;
 }
-
+/* -- ## --- RESUABLE CSS -- ## -- */
 .top-header{
     text-align: center;
     margin-bottom: 5em;
@@ -290,6 +287,7 @@ h3{
     color: var(--text-color-second);
     margin-bottom: 15px;
 }
+/* ----- ABOUT INFO ----- */
 .about-info{
     position: relative;
     display: flex;
@@ -318,7 +316,7 @@ h3{
 .about-btn button:hover{
     background: var(--first-color-hover);
 }
-
+/* ----- ABOUT / SKILLS BOX ----- */
 .skills-box{
     margin: 10px;
 }
@@ -337,7 +335,7 @@ h3{
     padding: 2px 10px;
     border-radius: 5px;
 }
-
+/* ----- PROJECTS BOX ----- */
 .project-container{
     display: flex;
     width: 100%;
@@ -360,14 +358,12 @@ h3{
 }
 .project-box>i{
     font-size: 50px;
-    color: var(--second-color);
+    color: #00B5E7;
     margin-bottom: 25px;
 }
 .project-box label{
     font-size: 15px;
     color: #777;
-    padding-left: 20px;
-    padding-right: 20px;
     text-align: center;
 }
 .project-box::after, .contact-info::after{
@@ -390,7 +386,7 @@ h3{
     color: var(--color-white);
     z-index: 2;
 }
-
+/* ----- CONTACT BOX ----- */
 .contact-info{
     position: relative;
     display: flex;
@@ -417,7 +413,7 @@ h3{
     margin-block: 5px;
 }
 .contact-info p>i{
-    font-size: 20px;
+    font-size: 18px;
 }
 .contact-info::after{
     background: var(--color-white);
@@ -428,7 +424,7 @@ h3{
     color: #777;
     z-index: 2;
 }
-
+/* ----- CONTACT FORM ----- */
 .form-control{
     display: flex;
     flex-direction: column;
@@ -448,7 +444,6 @@ h3{
     border-radius: 10px;
     padding-inline: 20px;
     outline: none;
-
 }
 textarea{
     width: 100%;
@@ -474,14 +469,14 @@ textarea{
     font-size: 18px;
     rotate: -45deg;
 }
-
+/* ----- FOOTER BOX ----- */
 footer{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     row-gap: 30px;
-    background: #f8f8f8;
+    background: #F8F8F8;
     padding-block: 40px 60px;
 }
 .top-footer p{
@@ -502,13 +497,13 @@ footer{
 }
 .footer-social-icons{
     display: flex;
-    gap: 30px;
+    gap: 30px;   
 }
 .bottom-footer{
     font-size: 14px;
     margin-top: 10px;
 }
-
+/* ----- MEDIA QUERY == 1024px / RESPONSIVE ----- */
 @media only screen and (max-width: 1024px){
     .featured-text{
         padding: 0;
@@ -518,7 +513,7 @@ footer{
         height: 320px;
     }
 }
-
+/* ----- MEDIA QUERY == 900px / RESPONSIVE ----- */
 @media only screen and (max-width: 900px) {
     .nav-button{
         display: none;
@@ -533,7 +528,7 @@ footer{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: rgba(255, 255, 255, 0.74);
+        background: rgba(255, 255, 255, 0.7);
         backdrop-filter: blur(20px);
         width: 100%;
         min-height: 450px;
@@ -598,13 +593,15 @@ footer{
         display: none;
     }
 }
-
+/* ----- MEDIA QUERY == 540px / RESPONSIVE ----- */
 @media only screen and (max-width: 540px){
-    .wrapper{
+    .container{
         align-items: center;
+        max-width: 100%;
+        overflow-x: hidden;
     }
     .featured-name{
-        font-size: 32px;
+        font-size: 28px;
     }
     .project-box{
         width: 100%;
