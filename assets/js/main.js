@@ -88,4 +88,17 @@ const scrollActive = () => {
     });
 }
 
-window.addEventListener('scroll', scrollActive)
+window.addEventListener('scroll', scrollActive);
+
+document.getElementById('sendMessage').addEventListener('click', function () {
+    // Obtén los valores de los campos
+    var nombre = encodeURIComponent(document.getElementById('name').value);
+    var correo = encodeURIComponent(document.getElementById('email').value);
+    var mensaje = encodeURIComponent(document.getElementById('message').value);
+
+    // Construye el enlace de WhatsApp
+    var whatsappLink = 'https://wa.me/59177249526?text=Nombre:%20' + nombre + '%0ACorreo:%20' + correo + '%0AMensaje:%20' + mensaje;
+
+    // Redirige a la página de WhatsApp
+    window.location.href = whatsappLink;
+});

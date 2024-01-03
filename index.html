@@ -16,8 +16,7 @@
         <nav id="header">
 
             <div class="nav-logo">
-                <p class="nav-name">Rojas</p>
-                <span></span>
+                <img src="assets/images/portafolio_logo.png" alt="Logo" class="nav-logo-img">
             </div>
 
             <div class="nav-menu" id="myNavMenu">
@@ -42,7 +41,9 @@
             </div>
 
             <div class="nav-button">
-                <button class="btn">Descargar CV <i class="uil uil-file-alt"></i></button>
+                <a href="/assets/documents/cv_arrp.pdf" download="cv_arrp.pdf">
+                    <button class="btn">Descargar CV <i class="uil uil-file-alt"></i></button>
+                </a>
             </div>
 
             <div class="nav-menu-btn">
@@ -64,8 +65,10 @@
                         <p>Apasionado desarrollador de software. Experto en crear aplicaciones innovadoras para escritorio, móviles y web. Siempre listo para aprender y enfrentar nuevos desafíos. Transformo ideas en soluciones digitales efectivas.</p>
                     </div>
                     <div class="featured-text-btn">
-                        <button class="btn blue-btn">Contáctame</button>
-                        <button class="btn ">Descargar CV <i class="uil uil-file-alt"></i></button>
+                        <button class="btn blue-btn" onclick="window.location.href='#contact';">Contáctame</button>
+                        <a href="/assets/documents/cv_arrp.pdf" download="cv_arrp.pdf">
+                            <button class="btn ">Descargar CV <i class="uil uil-file-alt"></i></button>
+                        </a>
                     </div>
                     <div class="social_icons">
                         <a href="https://www.linkedin.com/in/rodrigorp7/"><div class="icon"><i class="uil uil-linkedin-alt"></i></div></a>
@@ -97,7 +100,9 @@
                             <h3>Presentación</h3>
                             <p>Ingeniero de Sistemas Informáticos y apasionado desarrollador de software con experiencia en programación versátil. Especializado en la creación de aplicaciones de escritorio, móviles y web (backend y frontend). Siempre ansioso por aprender y crecer, estoy listo para enfrentar nuevos desafíos y transformar ideas en soluciones digitales innovadoras.</p>
                             <div class="about-btn">
-                                <button class="btn">Descargar CV <i class="uil uil-import"></i></button>
+                                <a href="/assets/documents/cv_arrp.pdf" download="cv_arrp.pdf">
+                                    <button class="btn">Descargar CV <i class="uil uil-import"></i></button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -183,14 +188,14 @@
                     <div class="col">
                         <div class="form-control">
                             <div class="form-inputs">
-                                <input type="text" class="input-field" placeholder="Nombre">
-                                <input type="text" class="input-field" placeholder="Correo electrónico">
+                                <input type="text" id="name" class="input-field" placeholder="Nombre">
+                                <input type="text" id="email" class="input-field" placeholder="Correo electrónico">
                             </div>
                             <div class="text-area">
-                                <textarea placeholder="Mensaje"></textarea>
+                                <textarea placeholder="Mensaje" id="message"></textarea>
                             </div>
                             <div class="form-button">
-                                <button class="btn">Enviar <i class="uil uil-message"></i></button>
+                                <button class="btn" id="sendMessage">Enviar <i class="uil uil-message"></i></button>
                             </div>
                         </div>
                     </div>
